@@ -9,14 +9,18 @@ class TemperatureSensor {
 private: 
   OneWire oneWire;
   DallasTemperature sensor;
-  float last_temperature;
+  float lastTemperature;
 
 public:
   TemperatureSensor(const unsigned int sensorPin);
 
+  void init();
+
   bool isConnected();
 
-  float getTemperaure();
-}
+  float getTemperature();
+
+  float getLastTemperature();
+};
 
 #endif /* TEMPERATURE_H */
