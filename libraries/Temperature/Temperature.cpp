@@ -17,7 +17,7 @@ bool TemperatureSensor::isConnected() {
 float TemperatureSensor::getTemperature() {
   this->sensor.requestTemperatures();
   float tempC = this->sensor.getTempCByIndex(0);
-  this->last_temperature = tempC;
+  this->lastTemperature = tempC;
   return tempC;
 }
 
